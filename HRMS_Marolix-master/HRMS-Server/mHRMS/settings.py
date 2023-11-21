@@ -18,7 +18,7 @@ SECRET_KEY = config('django-insecure-#cedo6k@mkcoy%!r2$wy$8h-(9x&ev+v%tvx+-k-o%)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['3.87.139.193','*']
 
 AUTH_USER_MODEL = "AdminAccount.User"
 
@@ -87,7 +87,7 @@ DATABASES = {
        'NAME': config('NewServerrrrrr'),
        'USER': config('postgres'),
        'PASSWORD': config('uuuu1111'),
-       'HOST': config('localhost'),
+       'HOST': config('3.87.139.193'),
        'PORT': config('5432'),
    }
 }
