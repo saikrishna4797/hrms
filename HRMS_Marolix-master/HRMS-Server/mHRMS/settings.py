@@ -13,12 +13,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='your_default_secret_key_here')
+SECRET_KEY = config('django-insecure-#cedo6k@mkcoy%!r2$wy$8h-(9x&ev+v%tvx+-k-o%)2jt$fb^', default='your_default_secret_key_here')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = "AdminAccount.User"
 
@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'mHRMS.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': config('DATABASE_NAME'),
-       'USER': config('DATABASE_USER'),
-       'PASSWORD': config('DATABASE_PASSWORD'),
-       'HOST': config('DATABASE_HOST'),
-       'PORT': config('DATABASE_PORT'),
+       'NAME': config('NewServerrrrrr'),
+       'USER': config('postgres'),
+       'PASSWORD': config('uuuu1111'),
+       'HOST': config('localhost'),
+       'PORT': config('5432'),
    }
 }
 
@@ -149,14 +149,14 @@ SIMPLE_JWT = {
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-EMAIL_BACKEND = config('EMAIL_BACKEND')
-EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
-EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
-EMAIL_USE_SSL = config('EMAIL_USE_SSL', default=False, cast=bool)
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+EMAIL_BACKEND = config('django.core.mail.backends.smtp.EmailBackend')
+EMAIL_HOST = config('smtp.elasticemail.com')
+EMAIL_PORT = config('2525', default=25, cast=int)
+EMAIL_USE_TLS = config('True', default=True, cast=bool)
+EMAIL_USE_SSL = config('False', default=False, cast=bool)
+EMAIL_HOST_USER = config('hrms.marolix@gmail.com')
+EMAIL_HOST_PASSWORD = config('72A1E73834FF483792ED9D18912D7E32BB85')
+DEFAULT_FROM_EMAIL = config('hrms.marolix@gmail.com')
 
 
 #IMAGE UPLOAD
